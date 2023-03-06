@@ -62,6 +62,7 @@ São algoritmos que utilizam a mesma chave para cifrar e decifrar (simétrica). 
 Para **cifrar**:
  - Input: Texto-limpo, Chave de cifra
  - Output: Texto-cifrado
+
 Para **decifrar**:
  - Input: Texto-cifrado, Chave de cifra
  - Output: Texto-limpo
@@ -72,6 +73,7 @@ As cifras de chave simétrica continuas usam um algoritmo que a partir de uma ch
 Para **cifrar**:
  - Input: Texto-limpo, Chave de cifra, Algoritmo de geração de chaves (pseudo-aleatório)
  - Output: Texto-cifrado
+
 Para **decifrar**:
  - Input: Texto-cifrado, Chave de cifra, Algoritmo de geração de chaves (pseudo-aleatório)
  - Output: Texto-limpo
@@ -92,9 +94,11 @@ São algoritmos que utilizam chaves diferentes para cifrar e decifrar (igual á 
 Para **par de chaves**:
  - Input: Chave pública, Chave secreta
  - Output: Par de chaves
+
 Para **cifrar**:
  - Input: Texto-limpo, Chave pública
  - Output: Texto-cifrado
+
 Para **decifrar**:
  - Input: Texto-cifrado, Chave secreta
  - Output: Texto-limpo
