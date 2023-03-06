@@ -1,6 +1,9 @@
 # Aula 2
 
-## Motivações da criptografia
+## Criptografia
+Conjunto de técnicas que visam a comunicação **secreta** entre dois agentes, sobre um canal aberto.
+
+### Motivações da criptografia
 Algumas motivações para a existência da criptografia:
  - Confidencialidade (inicialmente);
  - Integridade;
@@ -9,10 +12,10 @@ Algumas motivações para a existência da criptografia:
  - Autenticidade;
  - Autenticação de entidades;
 
-## Criptanálise
+### Criptanálise
 Conjunto de técnicas que visam a quebra de sistemas criptográficos. Consistem em decifrar sem saber a chave ou tendo a chave.
 
-### Ataque força bruta (Brute force)
+#### Ataque força bruta (Brute force)
 É uma técnica de ataque que consiste em tentar todas as possíveis chaves de cifra até encontrar a chave correta.
 
 Nota: Não é uma técnica de criptanálise.
@@ -20,10 +23,8 @@ Nota: Não é uma técnica de criptanálise.
 ## Criptologia
 Cientifica que estuda a criptografia e a criptanálise.
 
-## RC4 (Rivest Cipher 4)
-É um algoritmo de cifra simétrica que utiliza uma chave de 40 a 2048 bits.
-
 ## Cifras
+Mecanismos de **integridade** e de **troca de chaves** ou segredos criptográficos.
 
 ### Cifras clássicas
 São algoritmos que utilizam a mesma chave para cifrar e decifrar. Cifras clássicas têm **um** algoritmo (para cifrar e para decifrar).
@@ -44,7 +45,7 @@ Para **decifrar**:
  - Input: Texto-cifrado, Chave de cifra
  - Output: Texto-limpo
 
-#### Cifras de chave simétrica continuas
+### Cifras de chave simétrica continuas
 As cifras de chave simétrica continuas usam um algoritmo que a partir de uma chave com tamanho **fixo** e **comportável**, geral uma sequência tão grande quanto necessária para cifrar um ficheiro. Cifras de chave simétrica continua têm **três** algoritmos (para cifrar, para decifrar e para gerar chaves).
 
 Para **cifrar**:
@@ -54,9 +55,14 @@ Para **decifrar**:
  - Input: Texto-cifrado, Chave de cifra, Algoritmo de geração de chaves (pseudo-aleatório)
  - Output: Texto-limpo
 
+Nota: Este tipo de cifra tem como defeito a sua **maneabilidade** (facilidade da alteração do texto cifrado).
+
+#### RC4 (Rivest Cipher 4)
+É um algoritmo de cifra simétrica que utiliza uma chave de 40 a 2048 bits.
+
 Nota: O algoritmo para **decifrar** é o mesmo que o de **cifrar**.
 
-#### Cifras de chave simétrica de bloco
+### Cifras de chave simétrica de bloco
 O algoritmo para **decifrar** é diferente que o de **cifrar**.
 
 ### Cifras de chave pública
@@ -69,12 +75,11 @@ Para **cifrar**:
  - Input: Texto-limpo, Chave pública
  - Output: Texto-cifrado
 Para **decifrar**:
-    - Input: Texto-cifrado, Chave secreta
-    - OUtput: Texto-limpo
+ - Input: Texto-cifrado, Chave secreta
+ - Output: Texto-limpo
 
 
 ### Propriedades necessárias de cifras seguras
-
+Estas são algumas das propriedades que uma cifra segura tem:
 - **Difusão**: Se uma cifra for de qualidade, quaisquer propriedades estatísticas do texto limpo estão completamente **difusas** (sem qualquer tipo de correlação) por todo o criptograma.
-
-- 
+- **Não maneável**: Se uma cifra for de qualidade, não é possível **manejar** (alterar) o texto cifrado sem que o texto limpo seja alterado.
