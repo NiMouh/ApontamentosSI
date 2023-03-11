@@ -86,7 +86,9 @@ Nota: Este tipo de cifra tem como defeito a sua **maneabilidade** (facilidade da
 Nota: O algoritmo para **decifrar** é o mesmo que o de **cifrar**.
 
 ### Cifras de chave simétrica de bloco
-O algoritmo para **decifrar** é diferente que o de **cifrar**.
+O algoritmo para **decifrar** é diferente que o de **cifrar**. A diferença entre as cifras de chave simétrica de bloco e as cifras de chave simétrica continua é que as cifras de chave simétrica de bloco geram uma cifra de tamanho fixo (bloco) e não uma cifra de tamanho variável. Caso a cifra de chave simétrica de bloco seja alterada (maneada), o texto cifrado perderá toda a sua integridade.
+
+Nota: Este tipo de cifra é mais segura quando o canal de comunicação permite a **alteração** da mensagem cifrada.
 
 ### Cifras de chave pública
 São algoritmos que utilizam chaves diferentes para cifrar e decifrar (igual á chave simétrica). Cifras de chave pública têm **três** algoritmos (para cifrar, para decifrar e para gerar chaves).
@@ -105,3 +107,73 @@ Para **decifrar**:
 
 #### RSA (Rivest, Shamir, Adleman)
 É um algoritmo de cifra simétrica pública que utiliza uma chave de 512 a 4096 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
+
+
+## Exercicios das aulas práticas
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+// Função que recebe string com o nome do ficheiro a ler, ficheiro a receber e a chave pseudoaleatória para o cifrar
+void encrypt(char * inputFile, char * outputFile, int key){
+    FILE *fInput, *fOutput;
+    fInput = fopen(inputFile, "r");
+    fOutput = fopen(outputFile, "w");
+    srand(key);
+
+    // ler primeiro byte do ficheiro
+    int byte = fgetc(fInput);
+    while(byte != EOF){
+        // cifrar byte
+        byte = byte ^ rand();
+        // escrever byte cifrado no ficheiro e ler o próximo byte
+        fputc(byte, fOutput);
+        byte = fgetc(fInput);
+    }
+    fclose(fInput);
+    fclose(fOutput);
+}
+
+// Função que recebe string com o nome do ficheiro a ler, ficheiro a receber e a posição do byte a alterar
+void alterbyte(char * inputFile, char * outputFile, int bytePosition){
+    FILE *fInput, *fOutput;
+    fInput = fopen(inputFile, "r");
+    fOutput = fopen(outputFile, "w");
+
+    if(fInput == NULL || fOutput == NULL){
+        printf("Erro ao abrir ficheiro");
+        exit(1);
+    }
+
+    int i = 1;
+    int byte = fgetc(fInput);
+    while(byte != EOF){
+        if(i == bytePosition){
+            // alterar byte
+            byte = byte ^ 0x01;
+        }
+        // escrever byte cifrado no ficheiro e ler o próximo byte
+        fputc(byte, fOutput);
+        byte = fgetc(fInput);
+        i++;
+    }
+    fclose(fInput);
+    fclose(fOutput);
+}
+
+int main(int argc, char *argv[]){
+    if(argc != 4){
+        printf("Erro no número de argumentos");
+        exit(1);
+    }
+
+    char *inputFile = argv[1];
+    char *outputFile = argv[2];
+    int key = atoi(argv[3]); // unsigned int ikey = 123456789;
+
+    encrypt(inputFile, outputFile, key);
+    alterbyte(outputFile, "alterado.txt", 10);
+
+    return 0;
+}
+```
