@@ -13,10 +13,10 @@ Algumas motivações para a existência da criptografia:
  - Autenticação de entidades;
 
 ### Criptanálise
-Conjunto de técnicas que visam a quebra de sistemas criptográficos. Consistem em decifrar sem saber a chave ou tendo a chave.
+**Conjunto de técnicas que visam a quebra de sistemas criptográficos**. Consistem em decifrar sem saber a chave ou tendo a chave.
 
 ## Criptologia
-Cientifica que estuda a criptografia e a criptanálise.
+Ciência que estuda a criptografia e a criptanálise.
 
 ## Cifras
 Mecanismos de **integridade** e de **troca de chaves** ou segredos criptográficos.
@@ -34,14 +34,14 @@ Nota: Todas estas propriedades acima têm que ser balenceadas com a **usabilidad
 ### Cifras clássicas
 São algoritmos que utilizam a mesma chave para cifrar e decifrar. Cifras clássicas têm **um** algoritmo (para cifrar e para decifrar).
 
-Exemplos:
+Alguns Exemplos:
  - Cifra de César;
  - Cifra de Vigenère (mais difusa que a de César);
  - Cifra Enigma;
  - Cifra de Vernam (perfeita em termos de secretismo, contudo não é usável);
 
 ### Cifras de chave simétrica
-São algoritmos que utilizam a mesma chave para cifrar e decifrar (simétrica). Cifras de chave simétrica têm **dois** algoritmos (para cifrar e para decifrar).
+São algoritmos que utilizam a **mesma chave** para **cifrar** e **decifrar** (simétrica). Cifras de chave simétrica têm **dois** algoritmos (para cifrar e para decifrar).
 
 Para **cifrar**:
  - Input: Texto-limpo, Chave de cifra, Algoritmo de geração de chaves (pseudo-aleatório)
@@ -67,7 +67,7 @@ O algoritmo para **decifrar** é diferente que o de **cifrar**. A diferença ent
 Nota: Este tipo de cifra é mais segura, dependendo de como são usadas, quando o canal de comunicação permite a **alteração** da mensagem cifrada.
 
 ### Cifras de chave pública
-São algoritmos que utilizam chaves diferentes para cifrar e decifrar (igual á chave simétrica). Cifras de chave pública têm **três** algoritmos (para cifrar, para decifrar e para gerar chaves).
+São algoritmos que utilizam **chaves diferentes** para **cifrar** e **decifrar** (diferente da chave simétrica). Cifras de chave pública têm **três** algoritmos (para cifrar, para decifrar e para gerar chaves).
 
 Para **par de chaves**:
  - Input: Chave pública, Chave secreta
@@ -82,11 +82,14 @@ Para **decifrar**:
  - Output: Texto-limpo
 
 #### RSA (Rivest, Shamir, Adleman)
-É um algoritmo de cifra simétrica pública que utiliza uma chave de 512 a 4096 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
+É um algoritmo de cifra pública que utiliza uma chave de 512 a 4096 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
+
+#### AES (Advanced Encryption Standard)
+É um algoritmo de cifra simétrica de bloco que utiliza uma chave de 128, 192 ou 256 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
 
 
 ## Exercicios das aulas práticas
-Os algoritmos seguintes foram feitos no âmbito das aulas práticas da semana 2:
+Os algoritmos seguintes foram feitos no âmbito das aulas práticas da **semana 2**:
 ```c
 #include <stdio.h>
 #include <stdlib.h>
