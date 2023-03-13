@@ -15,23 +15,6 @@ Algumas motivações para a existência da criptografia:
 ### Criptanálise
 Conjunto de técnicas que visam a quebra de sistemas criptográficos. Consistem em decifrar sem saber a chave ou tendo a chave.
 
-#### Ataque com conhecimento de texto-limpo original (Known plaintext attack)
-É uma técnica de ataque que consiste em tentar descobrir a chave de cifra a partir de um texto-limpo original e do texto-cifrado correspondente.
-
-#### Ataque com o conhecimento apenas do criptograma (Ciphertext-only attack)
-É uma técnica de ataque que consiste em tentar descobrir a chave de cifra ou o texto-limpo, a partir de um texto-cifrado.
-
-#### Ataque com o texto-limpo original escolhido pelo atacante (Chosen plaintext attack)
-É uma técnica de ataque que consiste em tentar descobrir a chave de cifra ou o texto-limpo a partir de um texto-limpo original escolhido pelo atacante.
-
-#### Ataques com criptogramas escolhidos pelo atacante (Chosen ciphertext attack)
-É uma técnica de ataque que consiste em tentar descobrir a chave de cifra ou o texto-limpo a partir de um conjunto de textos-cifrados escolhidos pelo atacante, diferentes do texto que queremos cifrar.
-
-#### Ataque força bruta (Brute force)
-É uma técnica de ataque que consiste em tentar todas as possíveis chaves de cifra até encontrar a chave correta.
-
-Nota: Não é uma técnica de criptanálise.
-
 ## Criptologia
 Cientifica que estuda a criptografia e a criptanálise.
 
@@ -41,7 +24,8 @@ Mecanismos de **integridade** e de **troca de chaves** ou segredos criptográfic
 ### Propriedades necessárias de cifras seguras
 Estas são algumas das propriedades que uma cifra segura tem:
 - **Difusão**: Se uma cifra for de qualidade, quaisquer propriedades estatísticas do texto limpo estão completamente **difusas** (sem qualquer tipo de correlação) por todo o criptograma.
-- **Não maneável**: Se uma cifra for de qualidade, não é possível **manejar** (alterar) o texto cifrado sem que o texto limpo seja alterado.
+- **Confusão**: Se uma cifra for de qualidade, não são perceptiveis quaisquer relações entre um bloco de texto-limpo, a chave de cifra e o bloco de criptograma.
+- **Não maneável**: Se uma cifra for de qualidade, não é possível **manejar** (alterar) o texto cifrado sem que o texto limpo seja alterado. Esta propriedade é mantida por um código de **autenticação de mensagem**.
 - **Semântica**: Se uma cifra for de qualidade, o adversário não deverá ser capaz de obter informações sobre o texto limpo a partir do texto cifrado.
 - **Não determinística**: Esta propriedade permite que a cifra produza saídas diferentes para o mesmo texto limpo e chave de cifra.
 
@@ -78,7 +62,7 @@ Para **decifrar**:
  - Input: Texto-cifrado, Chave de cifra, Algoritmo de geração de chaves (pseudo-aleatório)
  - Output: Texto-limpo
 
-Nota: Este tipo de cifra tem como defeito a sua **maneabilidade** (facilidade da alteração do texto cifrado).
+Nota: Este tipo de cifra tem como defeito a sua **maneabilidade** (facilidade da alteração do texto cifrado). Se cifrarmos um ficheiro já antes cifrado com a **mesma chave**, iremos obter o texto-limpo.
 
 #### RC4 (Rivest Cipher 4)
 É um algoritmo de cifra simétrica que utiliza uma chave de 40 a 2048 bits.
@@ -88,7 +72,7 @@ Nota: O algoritmo para **decifrar** é o mesmo que o de **cifrar**.
 ### Cifras de chave simétrica de bloco
 O algoritmo para **decifrar** é diferente que o de **cifrar**. A diferença entre as cifras de chave simétrica de bloco e as cifras de chave simétrica continua é que as cifras de chave simétrica de bloco geram uma cifra de tamanho fixo (bloco) e não uma cifra de tamanho variável. Caso a cifra de chave simétrica de bloco seja alterada (maneada), o texto cifrado perderá toda a sua integridade.
 
-Nota: Este tipo de cifra é mais segura quando o canal de comunicação permite a **alteração** da mensagem cifrada.
+Nota: Este tipo de cifra é mais segura, dependendo de como são usadas, quando o canal de comunicação permite a **alteração** da mensagem cifrada.
 
 ### Cifras de chave pública
 São algoritmos que utilizam chaves diferentes para cifrar e decifrar (igual á chave simétrica). Cifras de chave pública têm **três** algoritmos (para cifrar, para decifrar e para gerar chaves).
