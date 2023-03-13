@@ -57,15 +57,11 @@ Exemplo para **decifrar**:
 | Algoritmo | AES-d(k,c[0]) | AES-d(k,c[1]) | AES-d(k,c[2]) |
 | Limpo     | aaaaaaa       | bbbbbbb       | aaaaaaa       |
 
-## *Cipher Block Chaining* (CBC)
-
-## *Couter Mode* (CTR)
-
-## *Output Feeback Mode* (OFM)
-
-## *Ciphertext Feedback Mode* (CFM)
-
-## *Padding* (Preenchimento)
+### *Cipher Block Chaining* (CBC)
+### *Couter Mode* (CTR)
+### *Output Feeback Mode* (OFM)
+### *Ciphertext Feedback Mode* (CFM)
+### *Padding* (Preenchimento)
 O **padding** é uma técnica de preenchimento de dados que consiste em adicionar um número de bytes ao final de um bloco de dados, de forma a que o tamanho do bloco de dados seja múltiplo do tamanho do bloco de dados da cifra.
 
 Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja múltiplo do tamanho do bloco da cifra é acrescentado um bloco de *padding*.
