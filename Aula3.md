@@ -65,3 +65,55 @@ Exemplo para **decifrar**:
 O **padding** é uma técnica de preenchimento de dados que consiste em adicionar um número de bytes ao final de um bloco de dados, de forma a que o tamanho do bloco de dados seja múltiplo do tamanho do bloco de dados da cifra.
 
 Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja múltiplo do tamanho do bloco da cifra é acrescentado um bloco de *padding*.
+
+## Resolução da ficha prática 4
+
+1. Logb(N), sendo b a base utilizada (pode ser 10) e n simboliza as possíveis ocorrências de cada símbolo.
+2. 2^8 = 256
+3. 2.41
+4. O modo de cifra do AES é o **CBC**.
+5. A chave "0123456789abcdef0123456789abcdef" tem tamanho 256 bits.
+6. Primeiro comprimir e depois cifrar
+7. AES = Advanced Encryption Standard
+8. AES é uma cifra simétrica de bloco
+9. Sim, existem duas linhas semelhantes no visualizador de conteudos do ficheiro cifrado.
+10. .
+11. Não precisa.
+12. Falta o vetor de inicialização.
+13. CBC = Cipher Block Chaining
+14. CBC é um modo de utilizar a cifra AES.
+
+```python
+# Tarefa 1: Calcula a entropia dos caracteres (bytes) de um ficheiro. O programa deve deolver os valores da entropia do ficheiro e a entropia máxima.
+
+import math
+
+def entropia(ficheiro):
+    # Abrir o ficheiro
+    f = open(ficheiro, "rb")
+    # Ler o ficheiro
+    conteudo = f.read()
+    # Fechar o ficheiro
+    f.close()
+    # Calcular o tamanho do ficheiro
+    tamanho = len(conteudo)
+    # Calcular a entropia
+    entropia = 0
+    for i in range(256):
+        # Calcular a probabilidade de cada byte
+        probabilidade = conteudo.count(bytes([i])) / tamanho
+        # Calcular a entropia
+        if probabilidade > 0:
+            entropia += probabilidade * math.log10(probabilidade)
+    # Calcular a entropia máxima
+    entropia_maxima = math.log10(256)
+    # Devolver os valores da entropia do ficheiro e a entropia máxima
+    return -entropia, entropia_maxima
+
+if __name__ == "__main__":
+    # Calcular a entropia do ficheiro
+    entropia, entropia_maxima = entropia("ficheiro.txt")
+    # Imprimir os valores da entropia do ficheiro e a entropia máxima
+    print("Entropia do ficheiro: " + str(entropia))
+    print("Entropia máxima: " + str(entropia_maxima))
+```
