@@ -85,7 +85,7 @@ Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja m
 
 ```python
 # Tarefa 1: Calcula a entropia dos caracteres (bytes) de um ficheiro. 
-O programa deve deolver os valores da entropia do ficheiro e a entropia máxima.
+# O programa deve deolver os valores da entropia do ficheiro e a entropia máxima.
 
 from math import log10
 
