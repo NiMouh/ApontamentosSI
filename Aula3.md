@@ -86,7 +86,7 @@ Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja m
 ```python
 # Tarefa 1: Calcula a entropia dos caracteres (bytes) de um ficheiro. O programa deve deolver os valores da entropia do ficheiro e a entropia máxima.
 
-import math
+from math import log10
 
 def entropia(ficheiro):
     # Abrir o ficheiro
@@ -104,9 +104,9 @@ def entropia(ficheiro):
         probabilidade = conteudo.count(bytes([i])) / tamanho
         # Calcular a entropia
         if probabilidade > 0:
-            entropia += probabilidade * math.log10(probabilidade)
+            entropia += probabilidade * log10(probabilidade)
     # Calcular a entropia máxima
-    entropia_maxima = math.log10(256)
+    entropia_maxima = log10(256)
     # Devolver os valores da entropia do ficheiro e a entropia máxima
     return -entropia, entropia_maxima
 
