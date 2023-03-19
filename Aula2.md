@@ -157,3 +157,49 @@ int main(int argc, char *argv[]){
     return 0;
 }
 ```
+
+Versão em python:
+```python
+import random
+
+# Função que recebe string com o nome do ficheiro a ler
+# ficheiro a receber e a chave pseudoaleatória para o cifrar
+def encrypt(inputFile, outputFile, key):
+    fileInput = open(inputFile, 'rb')
+    fileOutput = open(outputFile, 'wb')
+    random.seed(key)
+
+    content = fileInput.read()
+
+    for byte in content:
+        byte = byte ^ random.getrandbits(8)
+        fileOutput.write(bytes([byte]))
+
+    fileInput.close()
+    fileOutput.close()
+
+
+# Função que recebe string com o nome do ficheiro a ler,
+# ficheiro a receber e a posição do byte a alterar
+def alterbyte(inputFile, outputFile, bytePosition):
+    fileInput = open(inputFile, 'rb')
+    fileOutput = open(outputFile, 'wb')
+
+    content = fileInput.read()
+
+    for position in range(len(content)):
+        if position == bytePosition:
+            content[position] = content[position] ^ 0x01
+        fileOutput.write(bytes([content[position]]))
+    
+    fileInput.close()
+    fileOutput.close()
+
+if __name__ == "__main__":
+    inputFile = "input.txt"
+    outputFile = "output.txt"
+    key = 123456789
+
+    encrypt(inputFile, outputFile, key)
+    alterbyte(outputFile, "alterado.txt", 10)
+```
