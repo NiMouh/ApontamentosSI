@@ -64,6 +64,11 @@ Nota: O algoritmo para **decifrar** é o mesmo que o de **cifrar**.
 #### Cifras de chave simétrica de bloco
 O algoritmo para **decifrar** é diferente que o de **cifrar**. A diferença entre as cifras de chave simétrica de bloco e as cifras de chave simétrica continua é que as cifras de chave simétrica de bloco geram uma cifra de tamanho fixo (bloco) e não uma cifra de tamanho variável. Caso a cifra de chave simétrica de bloco seja alterada (maneada), o texto cifrado perderá toda a sua integridade.
 
+### *Padding* (Preenchimento)
+O **padding** é uma técnica de preenchimento de dados que consiste em adicionar um número de bytes ao final de um bloco de dados, de forma a que o tamanho do bloco de dados seja múltiplo do tamanho do bloco de dados da cifra.
+
+Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja múltiplo do tamanho do bloco da cifra é acrescentado um bloco de *padding*.
+
 Nota: Este tipo de cifra é mais segura, dependendo de como são usadas, quando o canal de comunicação permite a **alteração** da mensagem cifrada.
 
 ### Cifras de chave pública
@@ -80,12 +85,6 @@ Para **cifrar**:
 Para **decifrar**:
  - Input: Texto-cifrado, Chave secreta
  - Output: Texto-limpo
-
-#### RSA (Rivest, Shamir, Adleman)
-É um algoritmo de cifra pública que utiliza uma chave de 512 a 4096 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
-
-#### AES (Advanced Encryption Standard)
-É um algoritmo de cifra simétrica de bloco que utiliza uma chave de 128, 192 ou 256 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
 
 
 ## Exercicios das aulas práticas

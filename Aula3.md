@@ -1,5 +1,13 @@
 # Aula 3
 
+## Algoritmos conhecidos
+
+### RSA (Rivest, Shamir, Adleman)
+É um algoritmo de cifra pública que utiliza uma chave de 512 a 4096 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
+
+### AES (Advanced Encryption Standard)
+É um algoritmo de cifra simétrica de bloco que utiliza uma chave de 128, 256 OU 512 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
+
 ## Modelos de ataque
 Para testar a qualidade de uma cifra, é necessário testar a sua resistência a ataques. Para isso podemos fazer um jogo onde temos **dois personagens**:
 
@@ -37,11 +45,10 @@ Este tipo de ataque é feito quando a **Pessoa A (Alice)** e a **Pessoa B (Bob)*
 - **Ataque do homem no meio passivo**: A **Pessoa C (Claire)** não consegue alterar (apenas vê) a mensagem cifrada (também chamada de **Pessoa E (Eve)**).
 - **Ataque do homem no meio ativo**: A **Pessoa C (Claire)** consegue alterar e ver a mensagem cifrada.
 
-
 ## *Eletronic Code Book* (ECB)
 O **ECB** é um modo de operação de cifra que consiste em cifrar cada bloco de dados de forma independente. Ou seja, o bloco de dados é cifrado com a mesma chave, mas o resultado é diferente (caso os blocos não sejam iguais) para cada bloco de dados.
 
-Nota: Não é recomendado o uso para mensagens acima de 12 bytes não pseudo-aleatórios.
+Nota: **Não é recomendado** o uso para mensagens acima de 12 bytes não pseudo-aleatórios.
 
 Exemplo para **cifrar**:
 | Texto     | Bloco 1       | Bloco 2       | Bloco 3       |
@@ -58,13 +65,24 @@ Exemplo para **decifrar**:
 | Limpo     | aaaaaaa       | bbbbbbb       | aaaaaaa       |
 
 ### *Cipher Block Chaining* (CBC)
-### *Couter Mode* (CTR)
-### *Output Feeback Mode* (OFM)
-### *Ciphertext Feedback Mode* (CFM)
-### *Padding* (Preenchimento)
-O **padding** é uma técnica de preenchimento de dados que consiste em adicionar um número de bytes ao final de um bloco de dados, de forma a que o tamanho do bloco de dados seja múltiplo do tamanho do bloco de dados da cifra.
+O **CBC** é um modo de operação de cifra que consiste em cifrar cada bloco de dados de forma dependente do bloco anterior. Ou seja, o bloco de dados é cifrado com a mesma chave, mas o resultado é diferente (mesmo os blocos sendo iguais) para cada bloco de dados. Este método evita **alguns** ataques por maninupulação de blocos.
 
-Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja múltiplo do tamanho do bloco da cifra é acrescentado um bloco de *padding*.
+Exemplo para **cifrar**:
+ - Recebe um bloco de texto-limpo;
+ - Recebe um vetor de inicialização (IV) - gerado aleatóriamente, único para cada mensagem e partilhado entre as duas partes;
+ - É feito o XOR entre o bloco de texto-limpo e o IV;
+ - O resultado do XOR é cifrado com a chave;
+ - O resultado cifrado é enviado para o bloco seguinte e irá ser feito o XOR com o bloco seguinte;
+ - Processo repete-se até ao fim da mensagem;
+
+Exemplo para **decifrar**:
+ - Recebe um bloco de texto-cifrado;
+ - Este bloco é decifrado com a chave;
+ - É feito o XOR entre o bloco de decifrado e o IV;
+ - Esse bloco cifrado é enviado para o bloco seguinte e irá ser feito o XOR com o bloco seguinte após ser decifrado;
+ - Processo repete-se até ao fim da mensagem;
+
+Nota: Não suporta processamento paralelo a **cifrar** mas suporta a **decifrar**.
 
 ## Resolução da ficha prática 4
 
