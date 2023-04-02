@@ -25,3 +25,65 @@ Consiste em decompor um número composto nos seus **fatores primos**. Por exempl
 
 ## Protocolos de acordos de chaves
 Neste capítulo é apresentado formas de trocar ou estabelecer um segredo entre duas entidades sem haver nada **secreto** acordado à partida. Essa troca é realizada por uma comunicação segura, aonde as partes enviam mensagens encriptadas uma para a outra e usam técnicas de criptografia e matemática para garantir que apenas elas possam obter a chave secreta compartilhada. O objetivo é garantir a segurança e a privacidade das comunicações entre as partes envolvidas.
+
+## Continuação da Resolução da ficha prática 6
+
+### Tarefa 3
+```java
+import java.io.FileInputStream;
+import java.security.MessageDigest;
+
+public class sha1sum {
+    private static final String HEX_VALUES = "0123456789abcdef";
+
+    public static void main(String[] args) throws Exception {
+        if (args.length != 1) {
+            System.out.println("Usage: java sha1sum <file>");
+            return;
+        }
+
+        // Abrir o arquivo para leitura
+        FileInputStream inputStream = new FileInputStream(args[0]);
+
+        // Criar um objeto MessageDigest para calcular o SHA1
+        MessageDigest messageDigest = MessageDigest.getInstance("SHA1");
+
+        // Ler o arquivo em blocos e alimentá-lo para o MessageDigest
+        byte[] buffer = new byte[8192];
+        int bytesRead;
+        while ((bytesRead = inputStream.read(buffer)) != -1) {
+            messageDigest.update(buffer, 0, bytesRead);
+        }
+
+        // Calcular o hash
+        byte[] hash = messageDigest.digest();
+
+        // Converter o hash em uma string hexadecimal
+        String hexString = getHex(hash);
+
+        // Imprimir o resultado
+        System.out.println("SHA1(file): " + hexString);
+
+        // Fechar o arquivo
+        inputStream.close();
+    }
+
+    public static String getHex(byte[] raw) {
+        if (raw == null) {
+            return null;
+        }
+        final StringBuilder hex = new StringBuilder(2 * raw.length);
+        for (final byte b : raw) {
+            hex.append(HEX_VALUES.charAt((b & 0xF0) >> 4))
+                    .append(HEX_VALUES.charAt((b & 0x0F)));
+        }
+        return hex.toString();
+    }
+}
+```
+4. Compila-se com o comando:
+```console
+$ javac sha1sum.java
+```
+5. Não, neste caso não.
+6. Apenas foi igual quando foi feito o resumo do conteúdo e não do ficheiro em si com o *openssl*.

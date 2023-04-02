@@ -114,3 +114,4 @@ return 0;
 ```console 
 $ cc programa.c -lcrypto
 ```
+3. Desde que use a codificação da chave certa em ambas implementações, o resultado será o mesmo.
