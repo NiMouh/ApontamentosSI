@@ -26,6 +26,10 @@ Consiste em decompor um número composto nos seus **fatores primos**. Por exempl
 ## Protocolos de acordos de chaves
 Neste capítulo é apresentado formas de trocar ou estabelecer um segredo entre duas entidades sem haver nada **secreto** acordado à partida. Essa troca é realizada por uma comunicação segura, aonde as partes enviam mensagens encriptadas uma para a outra e usam técnicas de criptografia e matemática para garantir que apenas elas possam obter a chave secreta compartilhada. O objetivo é garantir a segurança e a privacidade das comunicações entre as partes envolvidas.
 
+Nota: Este tipo de protocolo deve ser utilizado em situações de **ataque ao homem no meio passivo**, onde o atacante não consegue modificar as mensagens que são enviadas entre as partes.
+
+## Protocolo de Diffie-Hellman
+
 ## Continuação da Resolução da ficha prática 6
 
 ### Tarefa 3

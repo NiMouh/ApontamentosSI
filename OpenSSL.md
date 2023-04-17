@@ -35,3 +35,10 @@ Exemplo:
 ```console
 $ openssl dgst <FLAG> <FICHEIRO> # FLAG pode ser -md5, -sha1, -sha256, -sha512
 ```
+
+## HMAC
+Gera um MAC (Message Authentication Code) de um ficheiro.
+
+Exemplo:
+```console
+$ openssl mac -cipher <CIFRA> -digest <DIGEST> -in <FICHEIRO> -out <FICHEIRO_CIFRADO> 
