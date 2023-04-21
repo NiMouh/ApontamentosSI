@@ -29,16 +29,32 @@ Recorrendo a chaves públicas (nomeadamente RSA), são usados três algoritmos:
 2. Comandos usados:
 ```console
 $ openssl dgst -sha1 texto-limpo.txt > texto-limpo.sha1
-$ openssl enc -c -aes-128-cbc -in texto-limpo.sha1 -out texto-limpo.aes-sha1 -K 1234567890abcdef -iv 1234567890abcdef
+$ openssl enc -c -aes-128 -in texto-limpo.sha1 -out texto-limpo.aes-sha1 -K 1234567890abcdef -iv 1234567890abcdef
 ```
 3. Comandos usados para verificar a integridade do ficheiro:
 ```console
-$ openssl enc -d -aes-128-cbc -in texto-limpo.aes-sha1 -out texto-limpo.sha1 -K 1234567890abcdef -iv 1234567890abcdef
-$ openssl dgst -sha1 texto-limpo.txt > texto-limpo.sha1
-$ diff texto-limpo.sha1 texto-limpo.sha1
+$ openssl enc -d -aes-128 -in texto-limpo.aes-sha1 -out texto-limpo.sha1 -K 1234567890abcdef -iv 1234567890abcdef
+$ openssl dgst -sha1 texto-limpo.txt > texto-limpo2.sha1
+$ diff texto-limpo.sha1 texto-limpo2.sha1
 ```
 
 4. O MAC que recebeu não verifica a integridade do ficheiro, pois o ficheiro foi alterado.
 5. Não, pois o ficheiro foi alterado.
 6. Dado ser um mecanismo da criptografia de chave simétrica todos os que possuem a chave secreta podem verificar a integridade do ficheiro.
 7. Garante que o ficheiro não sofre erros aleatórios durante a sua transmissão. Garante que o ficheiro não foi alterado durante a sua transmissão.
+8. Comandos usados para verificar a integridade do ficheiro:
+```console
+$ openssl mac -digest sha1 -macopt hexkey:1234567890abcdef -in texto-limpo.txt > texto-limpo.sha1 HMAC
+$ diff texto-limpo.sha1 texto-limpo2.sha1
+```
+9. Para testar a tarefa 5:
+```python
+if __name__ == "__main__":
+        for i in range(0,17):
+                print(2**i % 17)
+                print(3**i % 17)
+```
+Não, mas o 3 já é.
+10. O número usado foi o 14.
+11. Tentativa e erro.
+12. Sim, concordo, porque o atacante apenas conseguia escutar as comunicações.
