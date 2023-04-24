@@ -21,4 +21,15 @@ São necessários três algoritmos:
 Nota: neste criptograma caso eu cifre a mensagem duas vezes, irá resultar de dois textos cifrados diferentes.
 
 ## Certificados digitais
-É um documento que liga dois conceitos, assinado por alguém, que garante a autenticidade de um documento.
+É um documento que liga dois conceitos, assinado por alguém, que certifica, e não dá para desfazer qualquer detalhe.
+
+### Exemplo de certificado digital
+  - **Nome para quem é passado**;
+  - **Quem passou o certificado**;
+  - **Data de início do certificado**;
+  - **Data de fim do certificado**;
+  - **Chave pública**;
+  - **Algoritmo de assinatura**;
+  - **Assinatura**;
+
+Nota: Os sistemas operativos têm uma lista de certificados digitais de confiança e as respetivas chaves públicas.
