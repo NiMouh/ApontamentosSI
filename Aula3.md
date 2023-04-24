@@ -5,6 +5,8 @@
 ### RSA (Rivest, Shamir, Adleman)
 É um algoritmo de cifra pública que utiliza uma chave de 512 a 4096 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
 
+Nota: RSA no modo livre de escola é determinístico.
+
 ### AES (Advanced Encryption Standard)
 É um algoritmo de cifra simétrica de bloco que utiliza uma chave de 128, 256 OU 512 bits. Ele é bastante usado para criptografar dados em trânsito na internet.
 

@@ -12,7 +12,7 @@ Um cifra de **chave pública** que precisa de:
  - Um algoritmo para cifrar: Para cifrar fazemos a seguinte operação: C = M^E mod Z, sendo o M a mensagem a cifrar e C a mensagem cifrada;
  - Um algoritmo para decifrar: Para decifrar fazemos a seguinte operação: M = C^D mod Z, sendo o C a mensagem cifrada e M a mensagem decifrada.
 
-Nota: Normalmente não se utiliza o **Text Book RSA**. Invés disso é acrescentado um *padding* para aumentar a segurança (OAEP).
+Nota: Normalmente não se utiliza o **Text Book RSA** (apenas cifrar o conteúdo pretendido). Invés disso é acrescentado um *padding* aleatório para aumentar a segurança (OAEP ou Optimal Assimetric Encription Padding).
 
 ## Esquema de assinatura digital
 Recorrendo a chaves públicas (nomeadamente RSA), são usados três algoritmos:
@@ -22,6 +22,16 @@ Recorrendo a chaves públicas (nomeadamente RSA), são usados três algoritmos:
    - t = RSA(priv, SHA256(m));
  - Algoritmo para verificar assinatura: É calculado o Hash da mensagem e decifrado com a chave pública;
    - v = RSA(pub, SHA256(m)) == t;
+
+Nota: É possivel fazer um esquema de assinatura digital com chaves simétricas, porém seria necessário um agentes de confiança para garantir a integridade da chave.
+
+### Propriedades principais de uma assinatura digital
+Estas são as **cinco principais propriedades** de uma assinatura digital:
+  - Autenticidade: A mensagem foi assinada pelo dono da chave privada;
+  - Autenticação da origem de informação: A assinatura digital é única para cada mensagem;
+  - Integridade dos dados: Qualquer alteração na mensagem invalida a assinatura;
+  - Dificuldade de falsificação: É difícil falsificar uma assinatura digital;
+  - Garantia de não repúdio: O dono da chave privada não pode negar que assinou a mensagem.
 
 ## Resolução da ficha prática 7
 
