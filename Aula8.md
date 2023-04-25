@@ -35,6 +35,8 @@ Nota: neste criptograma caso eu cifre a mensagem duas vezes, irá resultar de do
 Nota: Os sistemas operativos têm uma lista de certificados digitais de confiança e as respetivas chaves públicas.
 
 ## Fim da aula 8
+Link para a [Aula anterior](Aula7.md)
+
 Não tem link ainda para a próxima aula.
 
-Link para os [CheatSheets](OpenSSL.md)
+Link para os [CheatSheets](CheatSheet.md)

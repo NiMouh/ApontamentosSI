@@ -204,6 +204,8 @@ if __name__ == "__main__":
 ```
 
 ## Fim da aula 2
+Link para a [Aula anterior](Aula1.md)
+
 Link para a [Próxima aula](Aula3.md)
 
-Link para os [CheatSheets](OpenSSL.md)
+Link para os [CheatSheets](CheatSheet.md)

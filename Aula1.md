@@ -36,4 +36,4 @@ vulnerável a determinados ataques.
 ## Fim da aula 1
 Link para a [Próxima aula](Aula2.md)
 
-Link para os [CheatSheets](OpenSSL.md)
+Link para os [CheatSheets](CheatSheet.md)

@@ -105,6 +105,8 @@ $ echo -n "" | openssl dgst -md5
 21. Não, porque não protege contra ataques que usam rainbow tables ou tabelas de hash précomputadas. Ora bolas!
 
 ## Fim da aula 4
+Link para a [Aula anterior](Aula3.md)
+
 Link para a [Próxima aula](Aula5.md)
 
-Link para os [CheatSheets](OpenSSL.md)
+Link para os [CheatSheets](CheatSheet.md)

@@ -140,6 +140,8 @@ if __name__ == "__main__":
 ```
 
 ## Fim da aula 3
+Link para a [Aula anterior](Aula2.md)
+
 Link para a [Próxima aula](Aula4.md)
 
-Link para os [CheatSheets](OpenSSL.md)
+Link para os [CheatSheets](CheatSheet.md)

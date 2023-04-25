@@ -70,6 +70,8 @@ Não, mas o 3 já é.
 12. Sim, concordo, porque o atacante apenas conseguia escutar as comunicações.
 
 ## Fim da aula 7
+Link para a [Aula anterior](Aula6.md)
+
 Link para a [Próxima aula](Aula8.md)
 
-Link para os [CheatSheets](OpenSSL.md)
+Link para os [CheatSheets](CheatSheet.md)

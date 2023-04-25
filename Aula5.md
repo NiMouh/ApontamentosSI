@@ -118,6 +118,8 @@ $ cc programa.c -lcrypto
 
 
 ## Fim da aula 5
+Link para a [Aula anterior](Aula4.md)
+
 Link para a [Próxima aula](Aula6.md)
 
-Link para os [CheatSheets](OpenSSL.md)
+Link para os [CheatSheets](CheatSheet.md)
