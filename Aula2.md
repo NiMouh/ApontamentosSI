@@ -202,3 +202,8 @@ if __name__ == "__main__":
     encrypt(inputFile, outputFile, key)
     alterbyte(outputFile, "alterado.txt", 10)
 ```
+
+## Fim da aula 2
+Link para a [Próxima aula](Aula3.md)
+
+Link para os [CheatSheets](OpenSSL.md)

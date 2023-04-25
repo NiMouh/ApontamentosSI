@@ -68,3 +68,8 @@ Não, mas o 3 já é.
 10. O número usado foi o 14.
 11. Tentativa e erro.
 12. Sim, concordo, porque o atacante apenas conseguia escutar as comunicações.
+
+## Fim da aula 7
+Link para a [Próxima aula](Aula8.md)
+
+Link para os [CheatSheets](OpenSSL.md)

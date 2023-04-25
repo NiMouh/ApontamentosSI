@@ -138,3 +138,8 @@ if __name__ == "__main__":
     print("Entropia do ficheiro: " + str(entropia))
     print("Entropia máxima: " + str(entropia_maxima))
 ```
+
+## Fim da aula 3
+Link para a [Próxima aula](Aula4.md)
+
+Link para os [CheatSheets](OpenSSL.md)

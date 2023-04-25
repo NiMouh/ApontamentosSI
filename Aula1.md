@@ -31,3 +31,9 @@ vulnerável a determinados ataques.
 5.  **Vírus**: programa que se propaga e se dissemina sozinho pela rede, com a ajuda da execução de um programa hospedeiro.
 6.  **Worm**: programa que se propaga e se dissemina sozinho pela rede (Ao contrário do vírus não precisa de um programa hospedeiro).
 7.  **Cavalo de troia**: São um tipo de *malware* que se disfarça de um programa legítimo, mas que na verdade executa um código malicioso.
+
+
+## Fim da aula 1
+Link para a [Próxima aula](Aula2.md)
+
+Link para os [CheatSheets](OpenSSL.md)

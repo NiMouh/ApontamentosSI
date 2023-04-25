@@ -33,3 +33,8 @@ Nota: neste criptograma caso eu cifre a mensagem duas vezes, irá resultar de do
   - **Assinatura**;
 
 Nota: Os sistemas operativos têm uma lista de certificados digitais de confiança e as respetivas chaves públicas.
+
+## Fim da aula 8
+Não tem link ainda para a próxima aula.
+
+Link para os [CheatSheets](OpenSSL.md)

@@ -91,3 +91,8 @@ $ javac sha1sum.java
 ```
 5. Não, neste caso não.
 6. Apenas foi igual quando foi feito o resumo do conteúdo e não do ficheiro em si com o *openssl*.
+
+## Fim da aula 6
+Link para a [Próxima aula](Aula7.md)
+
+Link para os [CheatSheets](OpenSSL.md)

@@ -103,3 +103,8 @@ $ echo -n "" | openssl dgst -md5
 19. A propriedade referida na pergunta anterior é a resistência a colisões.
 20. Sim, é `pedro`.
 21. Não, porque não protege contra ataques que usam rainbow tables ou tabelas de hash précomputadas. Ora bolas!
+
+## Fim da aula 4
+Link para a [Próxima aula](Aula5.md)
+
+Link para os [CheatSheets](OpenSSL.md)
