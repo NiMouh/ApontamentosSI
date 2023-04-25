@@ -65,7 +65,7 @@ DES_set_odd_parity(&keyBlock);
 DES_set_key_checked(&keyBlock, &schedule);
 
 size_t bytesLidos;
-while(bytesLidos = fread(&blockInput, 1, NUMBER_OF_BYTES, ficheiroInput) == NUMBER_OF_BYTES){
+while((bytesLidos = fread(&blockInput, 1, NUMBER_OF_BYTES, ficheiroInput)) == NUMBER_OF_BYTES){
 	DES_ecb_encrypt(&blockInput,&blockOutput, &schedule, enc);
 	fwrite(&blockOutput, 1, NUMBER_OF_BYTES, ficheiroOutput);
 }
