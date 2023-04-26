@@ -1,6 +1,56 @@
 # Cheat Sheet de Segurança Informática
 
+## Linux
+
+### Criar ficheiro vazio
+```console
+$ touch ficheiro.txt
+```
+
+### Comparar 2 ficheiros
+```console
+$ diff ficheiro1.txt ficheiro2.txt # (não dá output nenhum se os ficheiros forem iguais)
+```
+
+### Acesso ao manual de uma opração / aplicação
+```console
+$ man aplicação # (ex: man openssl)
+```
+
+### “Pesquisa” num output no terminal
+```console
+$ man openssl | grep md5
+```
+
+### Ver conteudo de um ficheiro
+```console
+$ cat ficheiro.txt
+```
+
+### Criar um ficheiro com uma string sem incluir os `\n`
+```console
+$ echo -n "texto" > texto-limpo.txt
+```
+
+### Adicionar mais string a um ficheiro existente sem os `\n`
+```console
+$ echo -n "texto" >> texto-limpo.txt
+```
+
+### Verificar ficheiro em HEX
+```console
+$ hexdump -C ficheiro.txt
+```
+
 ## Comandos utilizados no OpenSSL
+
+### Parametros gerais OpenSSL
+ - ``-K`` especifica chave em HEX
+ - ``-k`` especifica chave em ASCII (Não usado na UC)
+ - ``-out`` ficheiro de saida
+ - ``-in`` ficheiro de entrada
+ - ``-e`` operação de cifragem
+ - ``-d`` operação de decifragem
 
 Formato para usar o comando OpenSSL:
 ```console
