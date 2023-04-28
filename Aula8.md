@@ -67,26 +67,25 @@ Resultado: e = 377, d = 209, pk = (377, 391), sk = 209
 Cifrar a mensagem "Mensagem" com a chave pública pk = (377, 391)
 
 ```python
-N = 391
 
-def encrypt(pk, number):
-    return number ** pk % N
+def decrypt(sk, c, N):
+        print(pow(c,sk) % N)
 
-def decrypt(sk, cipher_number):
-    return cipher_number ** sk % N
+def encrypt(pk,m,N):
+        print(pow(m,pk) % N)
 
 if __name__ == "__main__":
+    N = 391
     message = 200
 
     # Cifrar
-    pk = 377391
-    encrypted_message = encrypt(pk, message)
-    print("Mensagem cifrada:", encrypted_message)
+    pk = 377
+    cipher_text = encrypt(pk, message, N)
 
     # Decifrar
     sk = 209
-    decrypted_message = decrypt(sk, encrypted_message)
-    print("Mensagem decifrada:", decrypted_message)
+    decrypt(sk, cipher_text, N)
+
 ```
 
 1. Não, e não há qualquer problema de segurança nisso.
