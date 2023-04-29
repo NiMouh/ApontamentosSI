@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
 ### Tarefa 4
 
-Comando no Openssl para gerar chaves RSA para o ficheiuro `sk_and_pk.pem`:
+Comando no Openssl para gerar chaves RSA para o ficheiro `sk_and_pk.pem`:
 
 ```console
 $ openssl genrsa -out sk_and_pk.pem
