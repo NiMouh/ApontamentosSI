@@ -68,23 +68,23 @@ Cifrar a mensagem "Mensagem" com a chave pública pk = (377, 391)
 
 ```python
 
-def decrypt(sk, c, N):
-        print(pow(c,sk) % N)
+def decrypt(sk, c, n):
+        print(pow(c,sk) % n)
 
-def encrypt(pk,m,N):
-        print(pow(m,pk) % N)
+def encrypt(pk,m,n):
+        print(pow(m,pk) % n)
 
 if __name__ == "__main__":
-    N = 391
+    n = 391
     message = 200
 
     # Cifrar
     pk = 377
-    cipher_text = encrypt(pk, message, N)
+    cipher_text = encrypt(pk, message, n)
 
     # Decifrar
     sk = 209
-    decrypt(sk, cipher_text, N)
+    decrypt(sk, cipher_text, n)
 
 ```
 
@@ -148,10 +148,6 @@ $ openssl rsautl -decrypt -inkey sk_and_pk.pem -in secret.key.enc -out secret.ke
 9. PGP = Pretty Good Privacy
 
 ### Tarefa 8
-Cifre o ficheiro com um algoritmo de cifra simétrica
-(e.g., o AES) e chave de cifra à sua escolha. Reveja as tarefas feitas anteriormente, nomeadamente
-a que se refere à troca de um segredo de 16 bytes
-usando RSA. Engendre um modo de usar a criptografia de chave pública RSA para colmatar o problema de trocar a chave de cifra simétrica. Se necessário, discuta isto com o Professor.
 
 Para **Cifragem**:
 
