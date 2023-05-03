@@ -101,14 +101,14 @@ $ openssl mac -digest <DIGEST> -macopt <CHAVE> -in <FICHEIRO> -out <FICHEIRO_CIF
 ### RSA
 Aqui os comandos *standard* usados são o `genrsa`, `rsa` e `rsautl`.
 
-**Gerar** um par de chaves RSA:
+**Gerar** um par de chaves RSA (Aqui está contida a chave pública e a privada):
 
 ```console
 $ openssl genrsa -out <FICHEIRO_CHAVE_PRIVADA> <TAMANHO_DA_CHAVE> 
 # Tamanho da chave pode ser 1024, 2048, 3072, 4096
 ```
 
-**Gerar** um par de chaves, mas protegidas por cifra simétrica:
+**Gerar** um par de chaves, mas protegidas por cifra simétrica (Aqui está contida a chave pública e a privada):
 
 ```console
 $ openssl genrsa -aes128 -out <FICHEIRO_CHAVE_PRIVADA> <TAMANHO_DA_CHAVE>
