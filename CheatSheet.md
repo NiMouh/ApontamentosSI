@@ -2,6 +2,11 @@
 
 ## Linux
 
+### Comprimir um ficheiro
+```console
+$ zip ficheiro-comprimido.zip ficheiro.txt
+```
+
 ### Criar ficheiro vazio
 ```console
 $ touch ficheiro.txt
