@@ -151,17 +151,10 @@ $ openssl enc -aes-128-cbc -d -in <FICHEIRO_CIFRADO> -out <FICHEIRO_DECIFRADO> -
 
 Comando para gerar uma assinatura digital de um ficheiro:
 ```console
-$ openssl dgst -sha256 -sign <FICHEIRO_CHAVE_PRIVADA> -out <FICHEIRO_ASSINATURA> <FICHEIRO_A_ASSINAR>
-```
-
-Outro modo, de antigir o mesmo resultado:
-```console
-$ openssl dgst -sha256 -out <FICHEIRO_HASH> <FICHEIRO_A_ASSINAR>
-$ openssl rsautl -sign -inkey <FICHEIRO_CHAVE_PRIVADA> -in <FICHEIRO_HASH> -out <FICHEIRO_ASSINATURA>
+$ openssl dgst -sha256 -sign <CHAVE_PRIVADA> -out <ASSINATURA> <FICHEIRO>
 ```
 
 E para confirmar a assinatura:
 ```console
-$ openssl rsautl -verify -inkey <FICHEIRO_CHAVE_PUBLICA> -in <FICHEIRO_ASSINATURA> -out <FICHEIRO_HASH>
-$ openssl dgst -sha256 -verify <FICHEIRO_CHAVE_PUBLICA> -signature <FICHEIRO_HASH> <FICHEIRO_A_ASSINAR>
+$ openssl dgst -sha256 -verify <CHAVE_PUBLICA> -signature <ASSINATURA> <FICHEIRO>
 ```
