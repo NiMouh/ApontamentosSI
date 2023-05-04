@@ -100,7 +100,7 @@ $ openssl dgst <FLAG> <FICHEIRO> # FLAG pode ser -md5, -sha1, -sha256, -sha512
 
 Exemplo:
 ```console
-$ openssl mac -digest <DIGEST> -macopt <CHAVE> -in <FICHEIRO> -out <FICHEIRO_CIFRADO> HMAC # CHAVE pode ser -hexkey <CHAVE_EM_HEX>
+$ openssl dgst <DIGEST> -hmac <CHAVE> <FICHEIRO>
 ```
 
 ### RSA
