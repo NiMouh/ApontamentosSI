@@ -54,7 +54,6 @@ $ diff texto-limpo.sha1 texto-limpo2.sha1
 7. Garante que o ficheiro não sofre erros aleatórios durante a sua transmissão. Garante que o ficheiro não foi alterado durante a sua transmissão.
 8. Comandos usados para verificar a integridade do ficheiro:
 ```console
-$ openssl mac -digest sha1 -macopt hexkey:1234567890abcdef -in texto-limpo.txt > texto-limpo.sha1 HMAC # Em alternativa o comando abaixo
 $ openssl dgst -sha1 -hmac 1234567890abcdef texto-limpo.txt > texto-limpo.sha1
 $ diff texto-limpo.sha1 texto-limpo2.sha1
 ```
