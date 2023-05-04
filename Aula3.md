@@ -92,12 +92,12 @@ Nota: Não suporta processamento paralelo a **cifrar** mas suporta a **decifrar*
 2. 2^8 = 256
 3. 2.41
 4. O modo de cifra do AES é o **CBC**.
-5. A chave "0123456789abcdef0123456789abcdef" tem tamanho 256 bits.
+5. A chave "0123456789abcdef0123456789abcdef" tem tamanho 32 bytes.
 6. Primeiro comprimir e depois cifrar
 7. AES = Advanced Encryption Standard
 8. AES é uma cifra simétrica de bloco
 9. Sim, existem duas linhas semelhantes no visualizador de conteudos do ficheiro cifrado.
-10. .
+10. 16 bytes.
 11. Não precisa.
 12. Falta o vetor de inicialização.
 13. CBC = Cipher Block Chaining
