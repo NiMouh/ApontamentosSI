@@ -39,7 +39,7 @@ Estas são as **cinco principais propriedades** de uma assinatura digital:
 2. Comandos usados:
 ```console
 $ openssl dgst -sha1 texto-limpo.txt > texto-limpo.sha1
-$ openssl enc -c -aes-128 -in texto-limpo.sha1 -out texto-limpo.aes-sha1 -K 1234567890abcdef -iv 1234567890abcdef
+$ openssl enc -aes-128 -in texto-limpo.sha1 -out texto-limpo.aes-sha1 -K 1234567890abcdef -iv 1234567890abcdef
 ```
 3. Comandos usados para verificar a integridade do ficheiro:
 ```console
