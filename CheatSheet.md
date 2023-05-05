@@ -72,22 +72,22 @@ Exemplo:
 $ openssl rand -hex 16 # Gera 16 bytes pseudo-aleatórios em hexadecimal
 ```
 
-### Enc
+### Encriptar
 Cifra/Decifra um ficheiro.
 
 Exemplo para **encriptar**:
 ```console
 $ openssl enc -e <ALGORITMO> -in <FICHEIRO> -out <FICHEIRO_CIFRADO> -K <CHAVE> -iv <VETOR_INICIALIZAÇÃO> 
-# ALGORITMO pode ser -aes-128-cbc, -aes-128-ecb, -aes-128-cfb, -aes-128-ofb, chacha20
+$ # ALGORITMO pode ser -aes-128-cbc, -aes-128-ecb, -aes-128-cfb, -aes-128-ofb, chacha20
 ```
 
 Exemplo para **desencriptar**:
 ```console
 $ openssl enc -d <ALGORITMO> -in <FICHEIRO_CIFRADO> -out <FICHEIRO_DECIFRADO> -K <CHAVE> -iv <VETOR_INICIALIZAÇÃO> 
-# ALGORITMO pode ser -aes-128-cbc, -aes-128-ecb, -aes-128-cfb, -aes-128-ofb, chacha20
+$ # ALGORITMO pode ser -aes-128-cbc, -aes-128-ecb, -aes-128-cfb, -aes-128-ofb, chacha20
 ```
 
-### Digest
+### Hash
 **Gera** um resumo criptográfico (hash) de um ficheiro.
 
 Exemplo:
