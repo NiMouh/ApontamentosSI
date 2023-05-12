@@ -23,3 +23,32 @@ OBS: Só depois de estabelecer toda a certificação, é que comunicações pode
 O cartão do cidadão tem dois certificados digitais X.509. Um certificado de autenticação e um certificado de assinatura. O cartão de cidadão tem uma chave privada e uma chave pública. A chave privada está protegida por um PIN. A chave pública está no certificado de autenticação e no certificado de assinatura.
 
 OBS: O cartão de cidadão não permite cifrar mensagens.
+
+## Resolução da ficha prática 9
+
+1. Gnu Privacy Guard.
+2. Rivest Shamir Adleman.
+3. GPG 2.2.
+4. Autenticação,Confidencialidade,Integridade.
+5. Criptografia sobre curvas elípticas, ElGamal.
+6. Sim, noto.
+7. Operações de leitura / escrita no disco, Interrupts ao processador, Introdução de dados pelo teclado, Movimentos e ações do rato.
+8. Sim, mas este não pára (não bloqueia) à espera de eventos.
+9. Acho que é muito seguro e, caso tenha de gerar chaves no meu trabalho prático de grupo, vou usar este ficheiro como fonte de aleatoriedade.
+10. 2 chaves
+11. Não preciso tomar precauções adicionais.
+12. Caracteres de A a Z, de a a z, de 0 a 9, e os caracteres = a /.
+13. Ao porta-chaves público
+14. `gpg --import <FICHEIRO>`
+15. As mesmas que antes.
+16. --armor para gerar o ficheiro em formato ASCII. -s para assinar. -e para cifrar.
+17. Neste caso não é preciso.
+18. Porque o programa não é inteligente, e não sabe o que é a confiança. Porque nunca disse ao programa que confiava nesse utilizador e nas chaves dele(a). Porque nunca assinei nenhuma destas chaves com a minha chave privada.
+19. `gpg --decrypt <FICHEIRO>`
+20. Sim, emitiu um aviso.
+21. Porque o programa precisa aceder ao porta-chaves privado.
+22. 3 chaves de confiança marginal e 1 chave de confiança absoluta.
+23. `--send-keys`
+24. `--recieve-keys`
+25. Que o GPG não deposita qualquer confiança nessa chave.
+26. Sim, sem sombra de dúvidas.

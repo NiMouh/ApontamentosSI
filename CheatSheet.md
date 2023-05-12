@@ -158,3 +158,60 @@ E para confirmar a assinatura:
 ```console
 $ openssl dgst -sha256 -verify <CHAVE_PUBLICA> -signature <ASSINATURA> <FICHEIRO>
 ```
+
+## OpenGPG
+
+### Gerar par de chaves
+```console
+$ gpg --full-generate-key
+```
+
+### Editar chaves
+```console
+$ gpg --edit-key <ID_DA_CHAVE>
+```
+
+### Listar chaves
+```console
+$ gpg --list-keys
+```
+
+### Lista chaves privadas
+```console
+$ gpg --list-secret-keys
+```
+
+### Lista de assinaturas
+```console
+$ gpg --list-sigs <ID_DA_CHAVE>
+```
+
+### Remover chave pública
+```console
+$ gpg --delete-key <ID_DA_CHAVE>
+```
+
+### Remover chave privada
+```console
+$ gpg --delete-secret-key <ID_DA_CHAVE>
+```
+
+### Exportar chave pública
+```console
+$ gpg --armor --export <ID_DA_CHAVE> --output <FICHEIRO>
+```
+
+### Importar chave pública
+```console
+$ gpg --import <FICHEIRO>
+```
+
+### Decifrar ficheiro
+```console
+$ gpg --decrypt <FICHEIRO_CIFRADO>
+```
+
+### Assinar uma chave
+```console
+$ gpg --sign-key <ID_DA_CHAVE>
+```
