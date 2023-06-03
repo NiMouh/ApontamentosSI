@@ -85,4 +85,25 @@ Outras medidas que podem ajudar a diminuir o risco seria:
 ## Resolução da prática 11
 1. 172.29.25.9/20
 2. Sim, tem endereço IPV6
-3. 
+3. 10.0.2.0
+4. /24 especifica a gama de endereços IP's que podem ser atribuídos a dispositivos na rede. O /24 significa que os primeiros 24 bits são usados para identificar a rede e os restantes 8 bits são usados para identificar os dispositivos na rede.
+
+### Tarefa 2
+Comando: `nmap -sn <endereço-de-rede/IP>`
+
+5. A flag `-sn` é usado para realizar um ping sweep.
+6. Enviando pacotes Internet Control Message Protocol (ICMP) do tipo echo request para todas as máquinas e considerando que estão ligadas aquelas para que recebe uma resposta.
+7. Eh.. sim,tomei.
+8. Sim, consigo, o gateway.
+
+### Tarefa 3
+`-sX` - TCP Xmas Scan
+
+`-vv` - Verbose
+
+`-O` - OS detection
+
+11. As sequências são previsíveis.
+13. O sistema operativo é da famila Linux.
+14. Localhost é o endereço IP 127.0.0.1. É usado para se referir ao próprio computador.
+15. 
