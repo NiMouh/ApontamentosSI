@@ -60,6 +60,8 @@ echo "
 4. `cp register.php insert.php`
 5. `mysql > CREATE DATABASE WebApp`
 6. `CREATE TABLE User (username VARCHAR(30), salt CHAR(32), rep CHAR(64));` - Cria a tabela USER
+7. Sim faz sentido usar `VARCHAR` no username, pois o tamanho do username pode variar, e usar `CHAR` no salt e no rep, pois o tamanho destes é fixo.
+8. O valor do *salt* é um valor aleatório que é adicionado à *password* antes de ser calculado o *hash*, com o objetivo de tornar o *hash* mais seguro.
 
 ### Tarefa 7
 
