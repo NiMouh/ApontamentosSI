@@ -1,13 +1,42 @@
 # Aula 10
 
+## Quantificiação de risco
+É possível definitr uma forma simples para o cálculo do risco (R) associado a uma determinada vulnerabilidade:
 
-# Resolução da prática 10
+R = P x V, sendo o P a probabilidade de ocorrência de um ataque e o V o valor do ativo.
+
+Apesar de ser uma forma simples de calcular o risco, esta fórmula não é muito precisa, pois implica:
+ - Identificação e caracterização de vulnerabilidades;
+ - Dedução da probabilidade de ocorrência de um ataque;
+
+## Detetores de vulnerabilidades
+Um dos primeiros passos para prevenir um possivel ataque será a **identificação do Sistema Operativo** (SO) e das **vulnerabilidades** da máquina alvo.
+
+Estas são algumas das formulas de identificar vulnerabilidades:
+ - Flâmulas (*Banners*): Consiste em observar o *banner* publicitado por servidores aquando o seu acesso, não é muito usado em máquinas cliente pois normalmente não têm serviços de rede ativos.
+ - Impressão digital da Pilha IP: Consiste em identificar e coletar informações específicas sobre um dispositivo ou rede com base no seu endereço IP. Esta técnica é usada para identificar o SO e a versão do mesmo.
+ - RING (Responder Identification Next Generation): Consiste em enviar um pacote ICMP para o alvo e analisar a resposta.
+ - NMAP: Consiste em enviar pacotes TCP SYN para as portas mais comuns e analisar as respostas.
+ - Inventariação de Serviços (Service Scanning): Consiste em enviar pacotes TCP SYN (ou UDP) para as portas mais comuns e analisar as respostas com o objetivo de identificar os serviços que estão a correr na máquina alvo.
+ - Rastreio de Portas (Port Scanning): Consiste em enviar pacotes TCP SYN (ou UDP) para as portas mais comuns e analisar as respostas com o objetivo de identificar as portas que estão abertas na máquina alvo.
+ - Inventariação de Deficiências de Administração: Consiste na exploração de vulnerabilidades conhecidas em serviços e aplicações comuns.
+ - Ataques LAND: Consiste em enviar pacotes TCP SYN com o endereço IP de origem igual ao endereço IP de destino.
+ - Ataques Teardrop: Consiste em enviar pacotes IP com fragmentos sobrepostos.
+ - Ataques Echo-Chargen: enviar um pacote UDP com o mesmo endereço IP fonte e destino para a máquina vítima, e com os portos UDP de um e de outro serviço na fonte e no destino. O *echo* (porta 7) reenvia para o *chargen* (porta 19), e o *chargen* reenvia para o *echo*.
+ - Ataque de Inundação de inicialização (SYN Flood): Consiste em enviar um grande número de pacotes TCP SYN para a máquina vítima, sem nunca enviar o pacote ACK para completar a ligação.
+
+## Erros de Realização
+Por norma são mencionados **dois tipos** de ataques ou vulnerabilidades:
+ - Vulnerabilidade de transbordamento de memória (*Buffer Overflow*): Consiste em escrever dados para além do limite de um *buffer* de memória, podendo assim corromper dados de outros programas ou do próprio sistema operativo.
+ - Vulnerabilidades associadas a cadeias de formato (*Format String*): Consiste em usar dados de entrada com códigos de controlo de formatação de *strings*.
+
+## Resolução da prática 10
 
 1. Apache HTTP Server, MySQL, PHP, Perl
 2. Let´s encrypt
 3. Mozilla, Google, Facebook, Cisco
 
-## Tarefa 2
+### Tarefa 2
 
 ```php
 <?php
@@ -32,7 +61,7 @@ echo "
 5. `mysql > CREATE DATABASE WebApp`
 6. `CREATE TABLE User (username VARCHAR(30), salt CHAR(32), rep CHAR(64));` - Cria a tabela USER
 
-# Tarefa 7
+### Tarefa 7
 
 ```php
 <?php
@@ -49,7 +78,7 @@ function create_hash($password, $salt, $hash_algorithm){
 ?>
 ```
 
-# Tarefa 9
+### Tarefa 9
 
 ```php
 <?php
@@ -83,7 +112,7 @@ mysql_close($connection);
 ```
 
 
-# Tarefa 10
+### Tarefa 10
 
 No `login.php`:
 ```php

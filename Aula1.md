@@ -27,7 +27,7 @@ vulnerável a determinados ataques.
 1. **Exploit**: conjunto de instruções que exploram uma vulnerabilidade.
 2.  **Ataque de negação de serviço** (*DoS*): ataque que visa saturar o sistema de forma a torná-lo indisponível.
 3.  **Defesa**: conjunto de medidas que visam proteger o sistema de ataques.
-4.  **Política de segurança**: conjunto de regras que definem como o sistema deve ser protegido.
+4.  **Política de segurança**: Documento que define as ameaças, os recursos críticos e as vulnerabilidades, a quantificação do risco e a concretização dos objetivos de segurança para determinada organização ou entidade.
 5.  **Vírus**: programa que se propaga e se dissemina sozinho pela rede, com a ajuda da execução de um programa hospedeiro.
 6.  **Worm**: programa que se propaga e se dissemina sozinho pela rede (Ao contrário do vírus não precisa de um programa hospedeiro).
 7.  **Cavalo de troia**: São um tipo de *malware* que se disfarça de um programa legítimo, mas que na verdade executa um código malicioso.

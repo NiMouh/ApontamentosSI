@@ -20,9 +20,29 @@ OBS: Só depois de estabelecer toda a certificação, é que comunicações pode
 
 ## Cartão de Cidadão
 
-O cartão do cidadão tem dois certificados digitais X.509. Um certificado de autenticação e um certificado de assinatura. O cartão de cidadão tem uma chave privada e uma chave pública. A chave privada está protegida por um PIN. A chave pública está no certificado de autenticação e no certificado de assinatura.
+O cartão do cidadão tem dois certificados digitais X.509. Um certificado de autenticação e um certificado de assinatura. O cartão de cidadão tem uma chave privada e uma chave pública. A chave privada está protegida por um **PIN**. A chave pública está no certificado de autenticação e no certificado de assinatura.
 
 OBS: O cartão de cidadão não permite cifrar mensagens.
+
+### Autenticação
+O cartão de cidadão é conhecido por usar autenticação de dois fatores usando o Cartão do Cidadão, através do *smartcard* e a inserção do PIN do titular do cartão. Existe no cartão de cidadão **9 PINs** diferentes ao todo:
+ - Ativação do *smartcard*: 8 dígitos
+ - Assinatura digital: 4 dígitos
+ - Cancelamento do *smartcard*: 8 dígitos
+ - PIN da morada: 4 dígitos
+ - PIN de autenticação: 4 dígitos
+ - PIN de assinatura: 4 dígitos
+ - Desbloqueio do PIN de morada: 4 dígitos
+ - Desbloqueio do PIN de autenticação: 4 dígitos
+ - Desbloqueio do PIN de assinatura: 4 dígitos
+
+Nota: A **cada operação** feita com o cartão de cidadão, é pedido o PIN de autenticação.
+
+#### PIN
+Em termos de autorização de operações, há 3 PINs diferentes para o cartão de cidadão:
+ - Um para autorizar a indicação da morada;
+ - Outro para autenticação do titular;
+ - Outro para produzir assinaturas digitais.
 
 ## Resolução da ficha prática 9
 
