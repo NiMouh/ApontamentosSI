@@ -31,8 +31,8 @@ Nota: Não é recomendado este modo de operação de cifra.
 ### *Output Feeback Mode* (OFM)
 ### *Ciphertext Feedback Mode* (CFM)
 
-## Principio de Rack-off
-O **princípio de Rack-off** é um princípio de segurança que consiste em que a chave de cifra é a única informação que deve ser mantida em segredo. Ou seja, se o algoritmo for conhecida, o atacante não deve conseguir descobrir o conteúdo da mensagem cifrada.
+## Principio de Kerckoffs
+O **princípio de Kerckoffs** é um princípio de segurança que consiste em que a chave de cifra é a única informação que deve ser mantida em segredo. Ou seja, se o algoritmo for conhecida, o atacante não deve conseguir descobrir o conteúdo da mensagem cifrada.
 
 ## Redes feistel
 São funções sempre **invertíveis**, mas construídas a partir de funções que podem não ter inversa. É uma forma engenhosa de construir funções pseudoaleatórias (PRFs) e permutações pseudoaleatórias (PRPs).
