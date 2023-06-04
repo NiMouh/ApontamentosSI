@@ -21,7 +21,7 @@ Funciona no seguinte modo:
 Isto pode trazer as seguintes vulnerabilidades:
  - **Spoofing**: Consiste em fazer-se passar por um servidor DNS para redirecionar o tráfego para um servidor malicioso.
  - **Cache Poisoning**: Consiste em alterar o conteúdo da cache de um servidor DNS para redirecionar o tráfego para um servidor malicioso.
- - **DNS Hijacking**: Consiste em alterar o conteúdo da cache de um servidor DNS para redirecionar o tráfego para um servidor malicioso.
+ - **DNS Hijacking**: Consiste em direcionar o tráfego para um servidor DNS controlado pelo invasor.
  - **DNS Tunneling**: Consiste em utilizar o protocolo DNS para enviar dados para fora da rede.
 
 ## Confidencialidade
