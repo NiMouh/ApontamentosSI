@@ -74,7 +74,7 @@ Basea-se no **envio de pacotes** ICMP Echo Request para um endereço de broadcas
 Semelhante ao ataque *Smurf*, mas basea-se no **envio de pacotes** UDP Echo Request para um endereço de broadcast com o endereço IP de origem forjado (*spoofed*).
 
 ## Solução parcial do *IP Spoofing*
-Possível solução seria definir e concretizar as políticas de segurança em routers e switches, de modo a não deixarem fazer difusão para dentro da rede. Caso o *IP Spoofing* não fosse possível, nenhum atacante poderia efetuar um ataque a uma vítima **remota**.
+Possível solução seria definir e concretizar as políticas de segurança em routers e switches, de modo a não deixarem fazer difusão para dentro da rede. Caso o *IP Spoofing* não fosse possível, nenhum atacante poderia efetuar um ataque a uma vítima **remotamente**.
 
 Outras medidas que podem ajudar a diminuir o risco seria:
  - **Desativar serviços** desnecessários;
